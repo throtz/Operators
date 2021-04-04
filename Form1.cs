@@ -15,34 +15,29 @@ namespace Operators
         }
         private void ButtonCheck_Click_1(object sender, EventArgs e)
         {
-            if (sender is null)
-            {
-                throw new ArgumentNullException(nameof(sender));
-            }
+            float a = Convert.ToInt32(textBox1.Text);
+            float b = Convert.ToInt32(textBox2.Text);
 
-            int a = Convert.ToInt32(textBox1.Text);
-            int b = Convert.ToInt32(textBox2.Text);
-
-            Nah(a, b);
+            Run(a, b);
         }
-        private void Nah(int a, int b)
+        private void Run(float a, float b)
         {
             switch (comboBox.SelectedItem.ToString())
             {
                 case "+":
-                    MessageBox.Show("Sum of thenumbers entered is: " + (a + b));
+                    MessageBox.Show($"Sum of the numbers entered is: {(float)a + b}");
                     break;
                 case "-":
-                    MessageBox.Show("Subtraction of the numbers entered is: " + (a - b));
+                    MessageBox.Show($"Subtraction of the numbers entered is: {(float)a - b}");
                     break;
                 case "*":
-                    MessageBox.Show("Multiplication of the numbers entered is: " + (a * b));
+                    MessageBox.Show($"Multiplication of the numbers entered is: {(float)a * b}");
                     break;
                 case "/":
-                    MessageBox.Show("Division of the numbers entered is: " + (a / b));
+                    MessageBox.Show($"Division of the numbers entered is: {(float)a / b}");
                     break;
                 case "%":
-                    MessageBox.Show("Modulo the two numbers is: " + (a % b));
+                    MessageBox.Show($"Modulo the two numbers is: {(float)a % b}");
                     break;
                 case ">":
                     MessageBox.Show("First number is bigger than the secound one " + (a > b));
