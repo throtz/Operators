@@ -17,7 +17,7 @@ namespace Operators
         {
             float a = Convert.ToInt32(textBox1.Text);
             float b = Convert.ToInt32(textBox2.Text);
-
+            
             Run(a, b);
         }
         private void Run(float a, float b)
@@ -53,9 +53,6 @@ namespace Operators
                     break;
                 case "<=":
                     MessageBox.Show("First number is smaller or equal to number two " + (a <= b));
-                    break;
-                default:
-                    MessageBox.Show("Illegal operation.");
                     break;
             }
         }
