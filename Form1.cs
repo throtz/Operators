@@ -54,6 +54,9 @@ namespace Operators
                 case "<=":
                     MessageBox.Show("First number is smaller or equal to number two " + (a <= b));
                     break;
+                default:
+                    MessageBox.Show("Illegal operation.");
+                    break;
             }
         }
     }
